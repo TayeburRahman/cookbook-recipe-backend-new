@@ -49,7 +49,7 @@ const UserSchema = new Schema<IUser>(
     },
     helgth_goal: {
       type: String,
-      enum: ["weight_loss", "muscle_gain", "maintain_weight"],
+      enum: ['weight_loss', 'muscle_gain', 'maintain_weight'],
     },
     age: {
       type: String,

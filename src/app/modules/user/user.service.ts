@@ -39,7 +39,6 @@ const updateMyProfile = async (req: RequestData): Promise<IUser> => {
   const updatedData = { ...data };
 
   if (updatedData?.relevant_dielary) {
-    console.log("=====relevant_dielary", updatedData.relevant_dielary)
     updatedData.relevant_dielary = JSON.parse(updatedData.relevant_dielary)
   }
   if (updatedData?.mail_types) {
