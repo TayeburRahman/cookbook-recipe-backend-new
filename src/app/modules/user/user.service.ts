@@ -11,8 +11,6 @@ const updateMyProfile = async (req: RequestData): Promise<IUser> => {
   const { files, body: data } = req;
   const { userId, authId } = req.user;
 
-  console.log("========data", data, files, userId, authId)
-
   if (!files && !Object.keys(data as any).length) {
     throw new ApiError(
       httpStatus.BAD_REQUEST,

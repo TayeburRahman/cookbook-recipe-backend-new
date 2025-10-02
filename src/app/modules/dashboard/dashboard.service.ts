@@ -739,7 +739,7 @@ const getRecipesReviewsW = async (recipeId: string, query: {
     if (!recipeId) {
         throw new ApiError(400, `Recipe ID is missing.`);
     }
-    const addsQuery = new QueryBuilder(Review.find().populate({
+    const addsQuery = new QueryBuilder(Review.find({ recipeId: recipeId }).populate({
         path: "userId",
         select: "name email profile_image"
     }), query)
