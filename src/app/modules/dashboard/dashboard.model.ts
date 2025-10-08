@@ -23,7 +23,6 @@ const SubscriptionSchema = new Schema<ISubscriptions>({
     }
 }, { timestamps: true });
 
-
 const CommentSchema = new Schema<IComment>({
     userId: {
         type: Schema.Types.ObjectId,
